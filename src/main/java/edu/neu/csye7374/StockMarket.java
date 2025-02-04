@@ -117,7 +117,7 @@ public class StockMarket {
         TechStock microsoftTech = (TechStock) microsoft;
         EnergyStock bpEnergy = (EnergyStock) bp;
 
-        // Example: single Bull/Bear strategies (could also do four separate if you prefer)
+        
         StockPricingStrategy bullStrategy = new BullMarketStrategy();
         StockPricingStrategy bearStrategy = new BearMarketStrategy();
 
