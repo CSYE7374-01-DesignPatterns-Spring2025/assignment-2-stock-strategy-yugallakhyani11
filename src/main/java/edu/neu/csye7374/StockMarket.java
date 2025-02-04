@@ -135,19 +135,27 @@ public class StockMarket {
         market.addStock(bp);
 
         // Trades
-        System.out.println("Trading AAPL...");
+        System.out.println("Trading AAPL... bull strategy");
         market.tradeStock("AAPL", "210");  // calls apple.setBid("210"), applies bull strategy
         market.tradeStock("AAPL", "220");
 
-        System.out.println("\nTrading PFE...");
+        System.out.println("\nTrading PFE...bear strategy");
         market.tradeStock("PFE", "76");    // calls pfizer.setBid("76"), applies bear strategy
         market.tradeStock("PFE", "78");
 
-        System.out.println("\nTrading MSFT...");
+        System.out.println("\nTrading MSFT...bear strategy");
         market.tradeStock("MSFT", "255");  // bear strategy
         market.tradeStock("MSFT", "260");
+        
+        System.out.println("\nSwitching Apple from Bull to Bear...");
+        appleTech.setStrategy(bearStrategy);
 
-        System.out.println("\nTrading BP...");
+       
+        System.out.println("Trading AAPL (now Bear)...");
+        market.tradeStock("AAPL", "190");
+        market.tradeStock("AAPL", "185");
+
+        System.out.println("\nTrading BP...bull strategy");
         market.tradeStock("BP", "52");     // bull strategy
         market.tradeStock("BP", "54");
 
